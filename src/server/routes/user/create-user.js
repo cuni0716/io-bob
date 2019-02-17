@@ -1,14 +1,14 @@
 import User from 'models/User';
 
 export default async (req, res) => {
-  const { name } = req.body;
+  const { name, bags } = req.body;
 
-  if (!name) {
+  if (!name || typeof name !== 'string' || !bags || isNaN(bags)) {
     return res.sendStatus(400);
   }
 
   try {
-    const user = new User({ name });
+    const user = new User({ name, bags });
     await user.save();
     return res.status(201).json(user);
   } catch (e) {

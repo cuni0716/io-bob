@@ -1,13 +1,17 @@
 {
-  "name": "nodejs-react-redux",
+  "name": "io-bob",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "",
+    "lint:server": "eslint src/server/**/*.js",
     "start": "concurrently 'npm run start:app' 'npm run start:server'",
     "start:app": "webpack-dev-server --mode development --open",
     "start:server": "nodemon",
-    "lint": "eslint src/**/*.js"
+    "test": "npm run lint && npm run test:front && npm run test:server",
+    "test:front": "",
+    "test:server": "NODE_EMV=test MONGODB_TEST=mongodb://localhost:27017/test mocha src/tests/**/*.test.js --require src/tests/setup.js"
   },
   "keywords": [],
   "author": "Ramon Cuni <mail@ramoncuni.com>",
@@ -20,6 +24,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-module-resolver": "^3.2.0",
+    "chai": "^4.2.0",
     "concurrently": "^4.1.0",
     "css-loader": "^2.1.0",
     "eslint": "^5.14.0",
@@ -27,6 +32,7 @@
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
+    "mocha": "^5.2.0",
     "nodemon": "^1.18.10",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.4",
