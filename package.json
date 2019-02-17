@@ -10,8 +10,8 @@
     "start:app": "webpack-dev-server --mode development --open",
     "start:server": "nodemon",
     "test": "npm run lint && npm run test:front && npm run test:server",
-    "test:front": "",
-    "test:server": "NODE_EMV=test MONGODB_TEST=mongodb://localhost:27017/test mocha src/tests/**/*.test.js --require src/tests/setup.js"
+    "test:front": "NODE_EMV=test mocha src/tests/app/**/*.test.js --require src/tests/setup.js",
+    "test:server": "NODE_EMV=test MONGODB_TEST=mongodb://localhost:27017/test mocha src/tests/server/**/*.test.js --require src/tests/setup.js"
   },
   "keywords": [],
   "author": "Ramon Cuni <mail@ramoncuni.com>",
@@ -33,19 +33,24 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "mocha": "^5.2.0",
+    "nock": "^10.0.6",
     "nodemon": "^1.18.10",
+    "redux-mock-store": "^1.5.3",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.4",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "mongoose": "^5.4.13",
+    "prop-types": "^15.7.2",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-redux": "^6.0.0",
+    "react-router-dom": "^4.3.1",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
   }

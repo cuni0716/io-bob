@@ -5,9 +5,9 @@ export default function Header() {
   return (
     <nav>
       <div className={`nav-wrapper ${primary}`}>
-        <a className="brand-logo center">Ramon LLompart</a>
+        <span className="brand-logo center">Ramon LLompart</span>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
-          <li><a href="sass.html">Create</a></li>
+          <li><a href="new">Create</a></li>
         </ul>
       </div>
     </nav>

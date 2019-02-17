@@ -2,3 +2,12 @@
   margin: 1rem;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  margin: 20px;
+}

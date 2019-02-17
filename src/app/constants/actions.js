@@ -1,3 +1,4 @@
-export const ACTIONS = {
-  ACTION: 'ACTION',
+export default {
+  RETRIEVE_USERS: 'RETRIEVE_USERS',
+  RECEIVE_USERS: 'RECEIVE_USERS',
 };
