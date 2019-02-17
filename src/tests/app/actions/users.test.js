@@ -15,8 +15,6 @@ describe('User actions', () => {
 
     const store = mockStore({ users: [] });
     await store.dispatch(retrieveUsers());
-
-    console.log('[ store.getActions() ]', store.getActions());
     expect(nock.isDone());
   });
 
@@ -28,7 +26,5 @@ describe('User actions', () => {
     const store = mockStore({ users: [] });
 
     await store.dispatch(retrieveUsers());
-
-    console.log('[ store.getActions() ]', store.getActions());
   });
 });

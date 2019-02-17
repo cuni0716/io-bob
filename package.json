@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "",
+    "lint": "npm run lint:app && npm run lint:server",
+    "lint:app": "eslint src/app/**/*",
     "lint:server": "eslint src/server/**/*.js",
     "start": "concurrently 'npm run start:app' 'npm run start:server'",
     "start:app": "webpack-dev-server --mode development --open",

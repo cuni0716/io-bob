@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class NewContainer extends Component {
-  render() {
-    return 'hola';
-  }
+export default function NewContainer() {
+  return <h1>NO MORE TIME :(</h1>;
 }

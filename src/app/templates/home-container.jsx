@@ -30,6 +30,11 @@ class HomeContainer extends Component {
 
 HomeContainer.propTypes = {
   retrieveUsersAction: PropTypes.func.isRequired,
+  users: PropTypes.shape({
+    _id: PropTypes.string,
+    name: PropTypes.string,
+    bags: PropTypes.number,
+  }).isRequired,
 };
 
 const mapStateToProps = state => ({
